@@ -126,7 +126,7 @@ function getHouseData(house_id, dialogueID) {
     ContentTitle = jsonData.projects[house_id].title;
 
     Dialog = getData(house_id, dialogueID);
-
+  let test;
     next.addEventListener("click", function () {
         ++dialogueID;
 
