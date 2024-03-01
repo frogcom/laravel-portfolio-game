@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\FrontController::class, 'index'])->name('frontPage');
+Route::get('/camera', [\App\Http\Controllers\FrontController::class, 'camera'])->name('camera');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

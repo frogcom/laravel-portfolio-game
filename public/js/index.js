@@ -1,17 +1,14 @@
 import {collisions} from './data/collisions.js'
-import {checkForCharacterCollision as checkForCharacterCollision} from './utils.js'
-// import {rectangularCollision} from './utils.js'
 
 import * as collision from "./utils.js"
-import {audio} from './data/audio.js'
+// import {audio} from './data/audio.js'
 import {charactersMapData } from './data/characters.js'
 import {Sprite,  Boundary} from "./classes.js";
 
 
-
-
 const canvas = document.querySelector("canvas");
  export const c = canvas.getContext("2d");
+
 
 
 // canvas.width = 100vw;
@@ -326,11 +323,10 @@ function animate() {
     renderables.forEach((renderable) => {
       renderable.draw();
     });
-    // console.log(1000 / deltaTime);
     let moving = true;
     player.animate = false;
 
-    if (textDiv.classList.contains("hidden") == false) {
+    if (textDiv.classList.contains("hidden") === false) {
       return;
     }
     if (startgame.classList.contains("zichtbaar")) {
